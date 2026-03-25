@@ -1,13 +1,18 @@
-import React, { Component } from 'react';
-import {Document, Page} from 'react-pdf';
-import resumePDF from '../pdf/BenJuan_Resume.pdf';
+'use client';
+import dynamic from 'next/dynamic';
+import { pdfjs } from 'react-pdf';
 
-export class Resume extends Component {
-  render() {
-    return <Document file = {resumePDF}>
-      <Page pageNumber = {1} />
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+const Document = dynamic(() => import('react-pdf').then((m) => m.Document), { ssr: false });
+const Page = dynamic(() => import('react-pdf').then((m) => m.Page), { ssr: false });
+
+const Resume = () => {
+  return (
+    <Document file="/BenJuan_Resume.pdf">
+      <Page pageNumber={1} />
     </Document>
-  }
-}
+  );
+};
 
 export default Resume;

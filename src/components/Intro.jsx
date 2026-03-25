@@ -1,4 +1,3 @@
-import React from 'react';
 import "../styling/intro.css"
 
 const Intro = () => {
@@ -14,13 +13,13 @@ const Intro = () => {
                 </div>
             </div>
             <div className="i-description">
-              I recently graduated from the University of Texas at Dallas in May 2022, where I got my Bachelors of Science in Computer Science. Currently I work as a software developer at Paycom. 
+              I'm a software developer with 4 years of experience at Paycom, building and maintaining software used by thousands of businesses across the country. I hold a Bachelor of Science in Computer Science from the University of Texas at Dallas.
             </div>
         </div>
       </div>
             
       <div className="i-right">
-        <img src = {require('../images/me.jpeg').default} alt = "" className = "i-image" />
+        <img src="/me.jpeg" alt="" className="i-image" />
       </div>
   </div>;
 };

@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[382],{2429:function(n,e,s){Promise.resolve().then(s.bind(s,7905))},7905:function(n,e,s){"use strict";var i=s(7437),t=s(2265);class r extends t.Component{render(){return(0,i.jsx)("div",{children:"This is socials."})}}e.default=r}},function(n){n.O(0,[971,117,744],function(){return n(n.s=2429)}),_N_E=n.O()}]);

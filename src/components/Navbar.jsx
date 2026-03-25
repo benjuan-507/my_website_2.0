@@ -1,26 +1,22 @@
-import React, { Component } from 'react';
-import {MenuItems} from "../data/MenuItems"
-import "../styling/navbar.css"
+'use client';
+import Link from "next/link";
+import { MenuItems } from "../data/MenuItems";
+import "../styling/navbar.css";
 
-class Navbar extends React.Component{
+const Navbar = () => {
+  return (
+    <nav className="NavbarItems">
+      <ul className="nav-menu">
+        {MenuItems.map((item, index) => (
+          <li key={index}>
+            <Link className={item.cName} href={item.url}>
+              {item.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
-    render(){
-        return(
-            <nav className = "NavbarItems">
-                <ul className = "nav-menu">
-                    {MenuItems.map((item, index) => {
-                        return(
-                            <li key = {index}>  
-                                <a className = {item.cName} href = {item.url}>
-                                {item.title}
-                                </a>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </nav>
-        )
-    }
-}
-
-export default Navbar
+export default Navbar;
